@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js"></script>
+  </head>
+  <main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-muted" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-muted" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Otros
+              </a>
+              <ul class="dropdown-menu text-muted" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item text-muted" href="#">Acción</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Otra acción</a></li>
+                <li><a class="dropdown-item text-muted" href="#">Algo más aquí</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </main>
+  <body class="p-4">
+  </br>
+<h1 class='text-center'>Análisis de Utilidades en un supermercado </h1>
+<h2 class='text-center'>Proyecto final visualización de datos</h2>
+<h3 class='text-center'>Por: Jose Humberto Torres L</h3>
+</br>
+<div class="p-2 bg-light border">
+<h3>1. Introdución</h3>
+<p>En esta actividad se va presentar el análisis de ventas para un supermercado ubicado en Colombia – Departamento de Casanare, el objetivo es presentar las ventas mensuales, categorías de productos más y menos vendidas, utilidades entre otros aspectos de ventas. Todos estos datos corresponden a las ventas en el año 2021, el dataset es propio y también se usó en minería de datos y estadística avanzada.</p>
+<h3>2.  Descripción del Dataset</h3>
+<p>De acuerdo a lo anterior el Dataset que se utiliza para esta actividad es de ventas, generalmente cuanta con 24 columnas que corresponden a variables y 75414 registros que corresponden a las ventas en el año 2021.</p>
+<p>
+Ejemplo de las variables utilizadas:
+
+<li><strong>DIdFactura:</strong> Código de la factura asignado de forma automática por el Sistema. Tipo dato Int.</li>
+ <li><strong>IdProducto:</strong> Identificación del producto. Tipo dato Int.</li>
+
+<li><strong>CodigoAlterno:</strong> Código del producto vendido. Tipo de dato Int.</li>
+
+<li><strong>DescripcionLarga:</strong>Descripción larga del producto vendido. Tipo de dato text. </li>
+
+<li><strong>DescripcionCorta:</strong>Descripción corta del producto vendido. Tipo de dato text.</li>
+
+<li><strong>PrecioCosto:</strong>Precio de costo del producto. Tipo de dato Float.</li>
+
+<li><strong>PrecioPublicoReal:</strong>Precio real para venta al público. Tipo de dato Float. </li>
+
+<li><strong>PesoProducto:</strong>Peso para el producto. Tipo de dato Float. </li>
+
+<li><strong>CantidadS:</strong>Total productos vendidos. Tipo dato Float.</li>
+
+<li><strong>CantidadE:</strong>Total productos que entran. Tipo dato Int </li>
+
+<li><strong>IvaVenta:</strong>Total IVA aplicado al producto.</li>
+
+<li><strong>TotalRegistro:</strong> El valor total de la venta de un producto, es diferente a la venta total.</li>
+</br>
+Esta información se presenta en la siguiente tabla, los primeros registros:
+</p>
+</div>
+</br>
+<div class="d-grid gap-3">
+  <div class="p-2 bg-light border"><iframe title="Información Dataset - Proyecto" aria-label="Table" id="datawrapper-chart-16m0t" src="https://datawrapper.dwcdn.net/16m0t/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="425" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+  </script></div>
+</div>
+</br>
+<div class="p-2 bg-light border">
+<h3>3.Análisis de Utilidades.</h3>
+<p>En esta sesión se hace un análisis de las utilidades de acuerdo a cada una de las categorías de productos, donde evidentemente se observa que los productos que más dejan utilidad son las verduras y desde luego porque es la que más se vende, otro punto importante a tener presente en la categoría de harinas y azucares que también dejan una buena utilidad.</p>
+ <p> Con esta información el administrador y dueño del supermercado puede pensar en mejorar la oferta de verduras o bajar un poco el precio de las harinas ya que tiene buena salida y cuando se tienen precios más cómodos atraen más clientes, adicionalmente con esta información pueden lanzar campañas de marketing para mejorar las ventas. ( Ver graficos).
+</p>
+</div>
+</br>
+</br>
+    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-3 row-cols-sm-2">
+      <div class="col mb-3">
+        <div class="card h-100">
+          <div class="p-2 bg-light border text-center">
+            <iframe width="475" height="422" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhRMoSPlJCr3W5--HmyW9nZWiBH89Pm5rN3yr2RvRUm5ZHOzyV4sIvSHW7DCoW1r2nYjfWOoy-FlJz/pubchart?oid=1765293268&amp;format=interactive"></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">1.Utilidad por Categoría.</h5>
+            <p class="card-text">Para este caso se observa que las verduras es la categoría que más deja utilidades. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <div class="card h-100">
+          <div class="p-2 bg-light border text-center">
+            <iframe width="490" height="422" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhRMoSPlJCr3W5--HmyW9nZWiBH89Pm5rN3yr2RvRUm5ZHOzyV4sIvSHW7DCoW1r2nYjfWOoy-FlJz/pubchart?oid=1713570642&amp;format=interactive"></iframe>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">2. Total Productos vendidos</h5>
+            <p class="card-text">Las verduras, aceite y el azúcar son los productos que mas se venden en este supercado.</p>
+          </div>
+        </div>
+      </div>
+        <div class="card h-80">
+          <div class="p-2 bg-light border">
+            <iframe title="Porcentaje de Utilidad por Categoría" aria-label="Grouped Bars" id="datawrapper-chart-RdUEL" src="https://datawrapper.dwcdn.net/RdUEL/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="423" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+            </script>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">3. Porcentaje de Utilidad por Categoría</h5>
+            <p class="card-text">Se puede verificar que las verduras tienen un porcentaje mas significativo en las utilidades comparado con las otras categorías. .</p>
+          </div>
+        </div>
+      </div>
+    </br>
+</div>
+
+<div class="row row-cols-1 row-cols-lg-2 row-cols-md-3 row-cols-sm-2">
+  <div class="col mb-3">
+    <div class="card h-100">
+      <div class="p-2 bg-light border text-center">
+        <iframe width="800" height="516" frameborder="0" scrolling="no" style="overflow-y:hidden;" src="https://create.piktochart.com/embed/44b25b6e9401-it-s-a-blank-template-copy"></iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">4.Total Utilidad por Mes</h5>
+        <p class="card-text">De acuerdo a la gráfica Julio y Diciembre son los meses donde más se vende y se obtiene más utilidad, en Enero y Febrero las ventas son bajas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col mb-3">
+    <div class="card h-100">
+      <div class="p-2 bg-light border text-center">
+        <iframe width="800" height="516" frameborder="0" scrolling="no" style="overflow-y:hidden;" src="https://create.piktochart.com/embed/717e28ae3bb3-it-s-a-blank-template"></iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">5.Total Utilidad por Trimestre</h5>
+        <p class="card-text">La menor utilidad se obtiene en el primer trimestre.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</br>
+</div>
+<div class="p-2 bg-light border">
+<h3>4. Conclusiones</h3>
+<p>De acuerdo a este análisis de las utilidades de un pequeño supermercado podemos concluir:
+  <li>Las verduras son los productos que dejan un mejor margen de utilidad con respecto a las otras categorías. Por tanto, es importante crear campañas y planes para fortalecer las ventas y aumentar la utilidad.</li>
+  <li>Los aceites y azucares son productos que tienen buena salida y figuran entre los más vendidos, igualmente es importante generar estrategias para fortalecer las ventas de estos productos.</li>
+    <li>El primer trimestre del año las ventas disminuyen con respecto a los otros trimestres, se debe analizar por qué y tratar de crear campañas para equilibrar las ventas.</li>
+  </p>
+<h3>5.  Herramientas Utilizadas</h3>
+<p>Para el desarrollo de este proyecto se utilizan las siguientes herramientas:.</p>
+<li><strong>Datawrapper:</strong> Se utiliza para la tabla 1 y para el grafico 3. <a href="https://www.datawrapper.de/" target="_blank"> Pagina Web </a></li>
+ <li><strong>Google Sheets:</strong> Para los graficos 1 y 2 se utiliza esta herramienta.</li>
+ <li><strong>Piktochar:</strong> Los graficos 4 y 5 se utiliza es herramienta web, dejo la dirección.<a href="https://piktochart.com/" target="_blank"> Pagina Web </a></li>
+ <li><strong>StackBlitz:</strong> Los graficos 4 y 5 se utiliza es herramienta web, dejo la dirección.<a href="https://stackblitz.com/" target="_blank"> Pagina Web </a></li>
+ <li><strong>Bootstrap:</strong> Es una herramienta de código abierto para diseño de sitios y aplicaciones web.<a href="https://getbootstrap.com/" target="_blank"> Pagina Web </a></li>
+</div>
+
+    <footer>
+      <p><i class="fab fa-facebook-f"></i></p>
+      <div class="p-2 bg-light border text-center">
+        <p>Proyecto para Visualización de Datos.</p>
+        <p>Sitio Web en stackblitz.<a href="https://stackblitz.com/edit/stackblitz-starters-xzbsd6?file=src%2Findex.html" target="_blank"> Pagina Web </a> </p>
+        <p>Sitio GitHub.<a href="https://github.com/jhtl5/08MBID--Visualizacion-de-datos" target="_blank"> Pagina Web </a> </p>
+
+        </div>
+    </footer>
+</html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
